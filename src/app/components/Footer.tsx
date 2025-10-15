@@ -65,7 +65,7 @@ const Footer: React.FC = () => {
             </li>
             <li className="flex items-center gap-3">
               <PhoneIcon className="w-5 h-5 text-blue-400" />
-              <span>+91 87884-053-0-79</span>
+              <span>+91 87884-05379</span>
             </li>
             <li className="flex items-center gap-3">
               <MapPinIcon className="w-5 h-5 text-blue-400" />
@@ -77,7 +77,7 @@ const Footer: React.FC = () => {
 
       {/* Copyright */}
       <div className="max-w-7xl mx-auto px-6 pt-6 text-center text-sm text-gray-500">
-        © 2025 <span className="text-gray-300 font-medium">CodeClimb Solutions</span>. All rights reserved.
+        © 2025 <span className="text-gray-300 font-medium">CimbNCode Solutions</span>. All rights reserved.
       </div>
     </footer>
   );
