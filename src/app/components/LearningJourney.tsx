@@ -61,7 +61,7 @@ const phases = [
 
 const GuaranteedPath = () => {
   return (
-    <section id='features' className="bg-[#f9fbfd] py-16 px-6">
+    <section id='journey' className="bg-[#f9fbfd] py-16 px-6">
       <div className="max-w-7xl mx-auto text-center mb-12">
         <h2 className="text-3xl md:text-4xl font-bold text-gray-900">Your Learning Journey</h2>
         <p className="text-gray-600 mt-2 text-lg">

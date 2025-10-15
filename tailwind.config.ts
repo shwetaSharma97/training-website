@@ -4,6 +4,7 @@ module.exports = {
     extend: {
       animation: {
         blob: "blob 7s infinite",
+        "text-glow": "text-glow 3s ease-in-out infinite",
       },
       keyframes: {
         blob: {
@@ -20,6 +21,14 @@ module.exports = {
             transform: "translate(0px, 0px) scale(1)",
           },
         },
+        "text-glow": {
+          '0%, 100%': {
+            filter: 'drop-shadow(0 0 5px rgba(37, 99, 235, 0.8)) drop-shadow(0 0 10px rgba(249, 115, 22, 0.8))'
+          },
+          '50%': {
+            filter: 'drop-shadow(0 0 15px rgba(37, 99, 235, 0.4)) drop-shadow(0 0 25px rgba(249, 115, 22, 0.4))'
+          }
+        }
       },
     },
   },

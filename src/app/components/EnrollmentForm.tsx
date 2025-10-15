@@ -25,7 +25,7 @@ const EnrollmentForm = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-white via-blue-50 to-orange-50 flex items-center justify-center px-4 py-10">
+    <section id="enroll" className="min-h-screen bg-gradient-to-br from-white via-blue-50 to-orange-50 flex items-center justify-center px-4 py-10">
       <div className="max-w-2xl w-full">
         <motion.div
           className="bg-white shadow-xl rounded-lg overflow-hidden"
@@ -33,7 +33,7 @@ const EnrollmentForm = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4 }}
         >
-          <div className="p-7 bg-gradient-to-r from-orange-400 to-red-400">
+          <div className="p-7 bg-gradient-to-r from-blue-300 to-blue-400">
             <h2 className="text-3xl font-bold text-white">Ready to Start?</h2>
             <p className="text-orange-100 mt-2">
               Fill out the form and we’ll get back to you within 24 hours
@@ -43,7 +43,7 @@ const EnrollmentForm = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-1 flex items-center gap-2">
-                  <User className="h-4 w-4" /> First Name *
+                  <User className="h-4 w-4" /> First Name <span className="text-red-500">*</span>
                 </label>
                 <input
                   type="text"
@@ -57,7 +57,7 @@ const EnrollmentForm = () => {
               </div>
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-1">
-                  Last Name *
+                  Last Name <span className="text-red-500">*</span>
                 </label>
                 <input
                   type="text"
@@ -73,7 +73,7 @@ const EnrollmentForm = () => {
 
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-1 flex items-center gap-2">
-                <Mail className="h-4 w-4" /> Email Address *
+                <Mail className="h-4 w-4" /> Email Address <span className="text-red-500">*</span>
               </label>
               <input
                 type="email"
@@ -88,7 +88,7 @@ const EnrollmentForm = () => {
 
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-1 flex items-center gap-2">
-                <Phone className="h-4 w-4" /> Phone Number *
+                <Phone className="h-4 w-4" /> Phone Number <span className="text-red-500">*</span>
               </label>
               <input
                 type="tel"
@@ -103,7 +103,7 @@ const EnrollmentForm = () => {
 
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-1 flex items-center gap-2">
-                <BookOpen className="h-4 w-4" /> Interested Program *
+                <BookOpen className="h-4 w-4" /> Interested Program <span className="text-red-500">*</span>
               </label>
               <select
                 name="program"
@@ -136,14 +136,14 @@ const EnrollmentForm = () => {
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.97 }}
               type="submit"
-              className="w-full bg-orange-500 hover:bg-orange-600 transition text-white font-semibold py-3 rounded-md shadow-md"
+              className="w-full bg-blue-400 hover:bg-blue-400 transition text-white font-semibold py-3 rounded-md shadow-md"
             >
               Submit Enquiry
             </motion.button>
           </form>
         </motion.div>
       </div>
-    </div>
+    </section>
   );
 };
 

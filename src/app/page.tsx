@@ -5,7 +5,6 @@ import BuildSection from '@/app/components/BuildSection';
 import SuccessStories from '@/app/components/SuccessStories';
 import EnrollmentForm from '@/app/components/EnrollmentForm';
 import Footer from '@/app/components/Footer';
-import Courses from './components/PickCourse';
 import About from './components/About';
 import Header from './components/Header';
 
