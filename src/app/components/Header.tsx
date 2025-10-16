@@ -5,9 +5,9 @@ import Link from 'next/link';
 import { Menu, X } from 'lucide-react';
 
 const navLinks = [
-  { href: '#features', label: 'Features' },
+  { href: '#journey', label: 'Journey' },
   { href: '#curriculum', label: 'Curriculum' },
-  { href: '#cources', label: 'Cources' },
+  { href: '#about', label: 'About' },
   { href: '#stories', label: 'Success Stories' },
 ];
 
@@ -21,7 +21,7 @@ export default function Header() {
           {/* Logo */}
           <div className="flex-shrink-0">
             <Link href="/" className="text-2xl font-bold text-gray-900">
-              <span className="text-blue-600">CodeClimb</span>Solutions
+              <span className="text-blue-600">ClimbNGrow</span>Solutions
             </Link>
           </div>
 

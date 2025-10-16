@@ -1,102 +1,141 @@
-'use client'
+"use client";
 
-import React from 'react';
-import { motion } from 'framer-motion';
-import {
-  BookOpen,
-  Rocket,
-  BadgeCheck,
-  CheckCircle
-} from 'lucide-react';
+import React from "react";
+import { motion } from "framer-motion";
+import { BookOpen, Rocket, BadgeCheck, CheckCircle } from "lucide-react";
 
 const phases = [
   {
-    title: 'Phase 1: Training',
-    subtitle: '45 Days Intensive Program',
-    icon: <BookOpen className="w-6 h-6 text-white" />,
-    iconBg: 'bg-blue-600',
+    title: "Phase 1: Training",
+    subtitle: "45 Days Intensive Program",
+    icon: BookOpen,
+    gradient: "from-blue-500/90 via-indigo-500/90 to-purple-500/90",
     features: [
-      'Master frontend development with React',
-      'Learn backend with FastAPI & MongoDB',
-      'Build real-world projects',
-      'Daily coding challenges & workshops'
+      "Frontend development with React",
+      "Learn backend with FastAPI & MongoDB",
+      "Build real-world projects",
+      "Mock interviews & resume prep",
+      "Daily coding challenges & workshops",
     ],
-    footer: <span className="text-blue-600 font-bold text-xl mt-2">$1,999</span>
   },
   {
-    title: 'Phase 2: Internship',
-    subtitle: 'Guaranteed Opportunity',
-    icon: <Rocket className="w-6 h-6 text-white" />,
-    iconBg: 'bg-emerald-600',
+    title: "Phase 2: Internship",
+    subtitle: "Guaranteed Opportunity",
+    icon: Rocket,
+    gradient: "from-teal-400/90 via-emerald-500/90 to-cyan-500/90",
     features: [
-      'Work on real client projects',
-      'Collaborate with experienced teams',
-      'Learn industry best practices',
-      'Build your professional portfolio'
+      "Work on real client projects",
+      "Collaborate with experienced teams",
+      "Learn industry best practices",
+      "Build your professional portfolio",
+      "Career group support",
     ],
-    footer: (
-      <span className="bg-emerald-100 text-emerald-700 font-medium text-sm px-3 py-1 rounded-full mt-2 inline-block">
-        Included in Program
-      </span>
-    )
   },
   {
-    title: 'Phase 3: Placement',
-    subtitle: 'Full-Time Career',
-    icon: <BadgeCheck className="w-6 h-6 text-white" />,
-    iconBg: 'bg-orange-600',
+    title: "Phase 3: Placement",
+    subtitle: "Full-Time Career",
+    icon: BadgeCheck,
+    gradient: "from-orange-400/90 via-pink-500/90 to-red-500/90",
     features: [
-      'Full-time job opportunity',
-      'Competitive salary package',
-      'Career growth support',
-      'Continued mentorship'
+      "Resume Building",
+      "Competitive salary package",
+      "Mock interviews & soft skills",
+      "Career mentorship",
     ],
-    footer: (
-      <span className="bg-green-100 text-green-700 font-medium text-sm px-3 py-1 rounded-full mt-2 inline-block">
-        After Internship
-      </span>
-    )
-  }
+  },
 ];
 
 const GuaranteedPath = () => {
   return (
-    <section id='features' className="bg-[#f9fbfd] py-16 px-6">
-      <div className="max-w-7xl mx-auto text-center mb-12">
-        <h2 className="text-3xl md:text-4xl font-bold text-gray-900">Your Learning Journey</h2>
-        <p className="text-gray-600 mt-2 text-lg">
-          A comprehensive 3-phase program designed for success
-        </p>
+    <section
+      id="journey"
+      className="relative bg-gradient-to-b from-[#e2e3e6] via-[#f7f8f9] to-[#e9f0ff] py-24 px-6 overflow-hidden"
+    >
+      {/* Floating gradient orbs */}
+      <div className="absolute -top-20 -left-32 w-72 h-72 bg-gradient-to-r from-blue-200/60 to-indigo-300/60 blur-3xl rounded-full animate-pulse" />
+      <div className="absolute bottom-0 right-0 w-80 h-80 bg-gradient-to-r from-pink-200/60 to-orange-300/60 blur-3xl rounded-full animate-pulse" />
+
+      {/* Section Header */}
+      <div className="relative max-w-7xl mx-auto text-center mb-16">
+        <motion.h2
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-4xl md:text-5xl font-bold text-gray-900 tracking-tight"
+        >
+          Your Learning Journey
+        </motion.h2>
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.2, duration: 0.6 }}
+          className="text-gray-600 mt-4 text-lg max-w-2xl mx-auto"
+        >
+          A 3-phase roadmap designed to make you industry-ready — from hands-on
+          training to real-world internship and your first placement.
+        </motion.p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-        {phases.map((phase, index) => (
-          <motion.div
-            key={index}
-            className="bg-white rounded-xl border border-gray-200 p-6 shadow-sm flex flex-col items-start"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: index * 0.15, duration: 0.4 }}
-          >
-            <div className={`p-5 rounded-lg ${phase.iconBg} mb-4`}>
-              {phase.icon}
-            </div>
-            <h3 className="text-2xl font-semibold text-gray-900">{phase.title}</h3>
-            <p className="text-gray-500 mb-4">{phase.subtitle}</p>
+      {/* Phase Cards */}
+      <div className="relative grid grid-cols-1 md:grid-cols-3 gap-10 max-w-6xl mx-auto">
+        {phases.map((phase, index) => {
+          const Icon = phase.icon;
+          return (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: index * 0.2, duration: 0.7 }}
+              className="group relative bg-white/20 backdrop-blur-2xl border border-white/30 rounded-3xl p-8 shadow-[0_8px_32px_rgba(31,38,135,0.1)] hover:shadow-[0_8px_40px_rgba(31,38,135,0.2)] hover:-translate-y-2 transition-all duration-500"
+            >
+              {/* Icon Section (New Style) */}
+              <div className="relative mb-8 flex justify-center">
+                <div
+                  className={`absolute inset-0 bg-gradient-to-r ${phase.gradient} blur-2xl opacity-30 rounded-full`}
+                ></div>
+                <motion.div
+                  whileHover={{ scale: 1.1, rotate: 3 }}
+                  transition={{ type: "spring", stiffness: 200 }}
+                  className={`relative z-10 bg-white/30 backdrop-blur-lg border border-white/50 rounded-full p-6 shadow-lg`}
+                >
+                  <Icon className="w-10 h-10 text-gray-900" />
+                  {/* Gradient ring border */}
+                  <div
+                    className={`absolute -inset-[2px] rounded-full bg-gradient-to-r ${phase.gradient} opacity-60 blur-[3px]`}
+                  ></div>
+                </motion.div>
+              </div>
 
-            <ul className="space-y-5 text-md text-gray-700 mb-4">
-              {phase.features.map((feature, i) => (
-                <li key={i} className="flex items-center gap-2">
-                  <CheckCircle className="text-blue-500 w-4 h-4" />
-                  {feature}
-                </li>
-              ))}
-            </ul>
+              {/* Title & Subtitle */}
+              <h3 className="text-2xl font-semibold text-gray-900 mb-1 text-center">
+                {phase.title}
+              </h3>
+              <p className="text-gray-500 mb-6 text-sm tracking-wide text-center">
+                {phase.subtitle}
+              </p>
 
-            {phase.footer}
-          </motion.div>
-        ))}
+              {/* Features */}
+              <ul className="space-y-4 text-gray-700 flex-1">
+                {phase.features.map((feature, i) => (
+                  <li
+                    key={i}
+                    className="flex items-start gap-3 text-[15px] leading-relaxed"
+                  >
+                    <CheckCircle className="text-blue-500 w-4 h-4 mt-1 shrink-0" />
+                    {feature}
+                  </li>
+                ))}
+              </ul>
+
+              {/* Shine & Glass Layer */}
+              <div className="absolute inset-0 rounded-3xl border border-white/40 pointer-events-none"></div>
+              <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-white/10 to-transparent opacity-30 pointer-events-none"></div>
+            </motion.div>
+          );
+        })}
       </div>
     </section>
   );

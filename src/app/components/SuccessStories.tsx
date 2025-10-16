@@ -14,7 +14,7 @@ const testimonials: Testimonial[] = [
   {
     initials: 'SK',
     avatarColor: 'bg-blue-500', // Example color
-    name: 'Sarah Kim',
+    name: 'Sarang Reddy',
     role: 'Full-Stack Developer',
     quote: "I went from zero coding experience to landing a full-stack developer role in just 4 months. The hands-on projects and mentorship were invaluable!",
     rating: 5,
@@ -22,16 +22,16 @@ const testimonials: Testimonial[] = [
   {
     initials: 'MP',
     avatarColor: 'bg-teal-500', // Example color
-    name: 'Michael Patel',
-    role: 'Software Engineer',
+    name: 'Krishna Pawar',
+    role: 'Backend Engineer',
     quote: "The curriculum is top-notch. I learned modern frameworks and best practices that made me job-ready. Now I'm working on exciting projects!",
     rating: 5,
   },
   {
     initials: 'EG',
     avatarColor: 'bg-orange-500', // Example color
-    name: 'Emily Garcia',
-    role: 'Backend Developer',
+    name: 'Anjali Gupta',
+    role: 'Frontend Developer',
     quote: "The guaranteed internship gave me real-world experience. I built production apps and now have a stable career in tech. Best decision ever!",
     rating: 5,
   },

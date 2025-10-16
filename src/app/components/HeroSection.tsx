@@ -22,14 +22,14 @@ const FeatureBadge: React.FC<FeatureBadgeProps> = ({ icon: Icon, title, descript
       {/* Icon Wrapper: Large circle with light blue/white background */}
       {/* Increased size and used bg-blue-50/50 for a lighter effect */}
       <div className="w-14 h-14 flex items-center justify-center rounded-full bg-blue-100/50 mb-4 border border-blue-200/50 shadow-md">
-        <Icon className="w-5 h-5 text-blue-500" strokeWidth={2.5} /> {/* Increased stroke for better visibility */}
+        <Icon className="w-5 h-5 text-white" strokeWidth={2.5} /> {/* Increased stroke for better visibility */}
       </div>
 
       {/* Text Content */}
-      <h3 className="font-bold text-lg text-gray-800 mb-1 leading-snug">
+      <h3 className="font-bold text-lg text-white mb-1 leading-snug">
         {title}
       </h3>
-      <p className="text-gray-600 text-sm leading-normal">
+      <p className="text-white text-sm leading-normal">
         {description}
       </p>
     </div>
@@ -45,7 +45,7 @@ const PrimaryButton = ({ children }: { children: ReactNode }) => (
 
 // Outline Button (Blue Border style)
 const OutlineButton = ({ children }: { children: ReactNode }) => (
-  <button className="px-8 py-4 text-lg font-bold text-blue-600 border-2 border-blue-600 rounded-lg hover:bg-blue-50 hover:text-blue-700 transition-transform transform hover:scale-[1.02] duration-300">
+  <button className="px-8 py-4 text-lg font-bold text-white border-2 border-white rounded-lg hover:bg-blue-50 hover:text-blue-700 transition-transform transform hover:scale-[1.02] duration-300">
     {children}
   </button>
 );
@@ -74,7 +74,11 @@ const itemVariants = {
 export default function HeroSection() {
   return (
     // FULL WIDTH CONTAINER: Background takes up 100% width
-    <div className="relative text-center pt-20 pb-12 md:pt-32 md:pb-5 bg-white overflow-hidden">
+    <div 
+      className="relative text-center pt-20 pb-12 md:pt-32 md:pb-5 bg-cover bg-center bg-no-repeat overflow-hidden"
+      style={{ backgroundImage: "url('/tech.jpg')" }}
+    >
+      <div className="absolute inset-0 bg-black opacity-50 z-0"></div>
       <motion.div
         className="absolute top-0 left-0 -translate-x-1/2 -translate-y-1/2 z-0"
         animate={{
@@ -91,12 +95,26 @@ export default function HeroSection() {
         <div className="w-[700px] h-[700px] bg-blue-200 rounded-full opacity-20 blur-3xl"></div>
       </motion.div>
       <div
-        className="
-          absolute bottom-1/3 left-[85%] w-48 h-48 opacity-80 z-0 
-          text-[#3b82f6] // Tailwind way to set the color property (which feeds currentColor)
-          bg-[radial-gradient(currentColor_2px,_transparent_2px)]
-          bg-[size:16px_16px] 
-        "
+        className="absolute bottom-1/5 left-[90%] w-48 h-48 opacity-80 z-0 bg-gradient-to-r from-blue-300 to-orange-500"
+        style={{
+          WebkitMaskImage: 'radial-gradient(circle, black 2px, transparent 2px)',
+          WebkitMaskRepeat: 'repeat',
+          WebkitMaskSize: '16px 16px',
+          maskImage: 'radial-gradient(circle, black 2px, transparent 2px)',
+          maskRepeat: 'repeat',
+          maskSize: '16px 16px',
+        }}
+      ></div>
+      <div
+        className="absolute top-30 left-[-5%] w-48 h-48 opacity-80 z-0 bg-gradient-to-r from-blue-300 to-orange-500"
+        style={{
+          WebkitMaskImage: 'radial-gradient(circle, black 2px, transparent 2px)',
+          WebkitMaskRepeat: 'repeat',
+          WebkitMaskSize: '16px 16px',
+          maskImage: 'radial-gradient(circle, black 2px, transparent 2px)',
+          maskRepeat: 'repeat',
+          maskSize: '16px 16px',
+        }}
       ></div>
       <motion.div
         className="absolute bottom-0 right-0 translate-x-1/2 translate-y-1/2 z-0"
@@ -126,17 +144,17 @@ export default function HeroSection() {
         </motion.div>
 
         {/* Main Heading with Gradient Text */}
-        <motion.h1 variants={itemVariants} className="text-3xl sm:text-5xl md:text-6xl font-extrabold text-gray-700 tracking-tighter leading-tight mt-4">
+        <motion.h1 variants={itemVariants} className="text-3xl sm:text-5xl md:text-6xl font-extrabold text-white tracking-tighter leading-tight mt-4">
           <span className="block font-mono text-3xl sm:text-4xl md:text-6xl text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-orange-500 mt-2">
-            Full Stack Development
+            Master Full Stack Development
           </span>
-          <span className="block text-3xl font-stretch-50% sm:text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-orange-500 mt-2">
+          <span className="block text-3xl font-normal sm:text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-orange-500 mt-2 animate-text-glow">
             Land Your Dream Job
           </span>
         </motion.h1>
 
         {/* Sub-text / Description */}
-        <motion.p variants={itemVariants} className="mt-6 text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
+        <motion.p variants={itemVariants} className="mt-6 text-lg md:text-xl text-white max-w-3xl mx-auto">
           45 days of intensive training • Guaranteed internship • Full-time job placement
         </motion.p>
 
@@ -152,6 +170,11 @@ export default function HeroSection() {
             icon={Code}
             title="90 Days Training"
             description="Intensive full-stack curriculum"
+          />
+          <FeatureBadge
+            icon={Code}
+            title="Seminars & Workshops"
+            description="Seminar by Industry Experts"
           />
           <FeatureBadge
             icon={Users}
