@@ -11,7 +11,7 @@ const Footer: React.FC = () => {
           <div className="flex items-center gap-2 mb-3">
             <span className="text-blue-500 text-2xl font-bold">&gt;_</span>
             <h2 className="text-xl font-semibold text-white">
-              CodeClimb Solutions
+              CodeNClimb Solutions
             </h2>
           </div>
           <p className="text-sm text-gray-400 leading-relaxed">

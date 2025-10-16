@@ -97,7 +97,7 @@ export default function LearningExperience() {
             <AchievementCard
               icon={ShieldCheck}
               title="Be Interview-Ready"
-              description="Prepare for technical interviews with focused DSA and system design modules."
+              description="Prepare for technical interviews with focused questions and system design modules."
             />
             <AchievementCard
               icon={Briefcase}
