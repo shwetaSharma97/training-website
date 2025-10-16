@@ -4,7 +4,10 @@ import { UserPlus, ArrowRight, TrendingUp } from "lucide-react";
 
 export default function About() {
   return (
-    <section id="about" className="relative py-20 md:py-32 bg-white overflow-hidden">
+    <section
+      id="about"
+      className="relative py-20 md:py-32 bg-white overflow-hidden"
+    >
       {/* --- Background Decorative Elements --- */}
 
       {/* Top Left Gradient/Shape (Pink/Orange Blob) */}
@@ -83,17 +86,22 @@ export default function About() {
             {/* Green Underline */}
             <div className="w-16 h-1 bg-blue-500 mb-6 rounded-full"></div>
 
-            <p className="text-lg text-gray-700 leading-relaxed max-w-xl">
+            <p className="text-md text-gray-700 leading-relaxed max-w-lg">
               At
               <span className="font-bold text-gray-900">
                 {" "}
                 ClimbNCode Solutions ,
               </span>
               we believe coding is more than just a skill — it’s the language of
-              innovation. Our goal is to guide students from curiosity to
-              creation by providing hands-on learning, real-world projects, and
-              mentorship that inspires confidence. Let’s build the future, one
-              line of code at a time.
+              innovation and possibility.
+            </p>
+
+            <p className="text-md text-gray-700 leading-relaxed max-w-lg mt-3">
+              Our mission is to guide every curious mind from learning to
+              creating — through hands-on practice, real-world projects, and
+              mentorship that builds confidence. We’re here to help students
+              turn ideas into impact and passion into purpose. Together, let’s
+              build the future — one line of code at a time.
             </p>
 
             {/* <button className="flex items-center space-x-2 px-6 py-3 mt-8 text-lg font-bold text-white bg-blue-500 rounded-lg hover:bg-blue-600 transition duration-300 shadow-lg shadow-blue-300/50">
