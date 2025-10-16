@@ -53,7 +53,7 @@ export default function About() {
             </div>
 
             {/* Stat Card (20K+ Enrolled Learners) */}
-            <div className="absolute -bottom-8 left-0 lg:left-[10%] bg-white p-4 rounded-xl shadow-xl flex items-center space-x-3 w-56 border border-gray-100">
+            <div className="absolute -bottom-8 left-4 sm:left-0 lg:left-[10%] bg-white p-4 rounded-xl shadow-xl flex items-center space-x-3 w-56 border border-gray-100">
               <div className="p-2 bg-blue-50 rounded-full">
                 <UserPlus className="w-5 h-5 text-blue-400" />
               </div>
@@ -64,7 +64,7 @@ export default function About() {
             </div>
 
             {/* Tech Booster Info Card (Dreams can come true here) */}
-            <div className="absolute top-0 right-0 lg:right-[4%] lg:top-[-13%] w-46 h-36 bg-white p-6 rounded-xl shadow-xl text-center border border-gray-100 transform translate-x-0 lg:translate-x-1/4 translate-y-1/4 lg:translate-y-[-10%]">
+            <div className="absolute top-[-15%] right-[-5%] sm:top-0 sm:right-0 lg:right-[4%] lg:top-[-13%] w-46 h-36 bg-white p-6 rounded-xl shadow-xl text-center border border-gray-100 transform sm:translate-x-0 lg:translate-x-1/4 sm:translate-y-0 lg:translate-y-[-10%]">
               {/* Circular Gauge/Icon (Placeholder) */}
               <div className="w-11 h-11 mx-auto mb-2 flex items-center justify-center border-4 border-blue-300 rounded-full">
                 <span className="text-xl font-bold text-blue-500">
@@ -79,12 +79,12 @@ export default function About() {
           </div>
 
           {/* RIGHT COLUMN: About Text and CTA */}
-          <div className="pt-20 lg:pt-0">
+          <div className="pt-20 lg:pt-0 text-center lg:text-left">
             <p className="text-sm font-semibold text-gray-500 uppercase tracking-widest mb-2">
               Founder Message
             </p>
             {/* Green Underline */}
-            <div className="w-16 h-1 bg-blue-500 mb-6 rounded-full"></div>
+            <div className="w-16 h-1 bg-blue-500 mb-6 rounded-full text-"></div>
 
             <p className="text-md text-gray-700 leading-relaxed max-w-lg">
               At
