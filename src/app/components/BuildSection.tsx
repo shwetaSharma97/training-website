@@ -1,12 +1,6 @@
-'use client';
+"use client";
 import React from "react";
-import {
-  Layers,
-  Server,
-  ShieldCheck,
-  Briefcase,
-  Code2,
-} from "lucide-react";
+import { Layers, Server, ShieldCheck, Briefcase, Code2 } from "lucide-react";
 import { motion } from "framer-motion";
 
 interface AchievementCardProps {
@@ -120,12 +114,16 @@ export default function LearningExperience() {
                 <span className="w-3 h-3 bg-yellow-400 rounded-full"></span>
                 <span className="w-3 h-3 bg-green-500 rounded-full"></span>
               </div>
-              <span className="text-gray-400 text-sm">/src/LearnByDoing.jsx</span>
+              <span className="text-gray-400 text-sm">
+                /src/LearnByDoing.jsx
+              </span>
               <Code2 className="text-gray-500" />
             </div>
 
-            <pre className="text-sm font-mono text-gray-300 leading-relaxed">
-{`function StudentJourney() {
+            {/* Added overflow-x-auto for horizontal scrolling on small screens */}
+            {/* Adjusted font size to be smaller on mobile */}
+            <pre className="overflow-x-auto text-xs sm:text-sm font-mono text-gray-300 leading-relaxed">
+              {`function StudentJourney() {
   const [progress, setProgress] = useState("Learning 🚀");
 
   return (

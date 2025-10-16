@@ -38,14 +38,14 @@ const FeatureBadge: React.FC<FeatureBadgeProps> = ({ icon: Icon, title, descript
 
 // Primary Button (Blue Gradient style)
 const PrimaryButton = ({ children }: { children: ReactNode }) => (
-  <button className="px-8 py-4 text-lg font-bold text-white bg-blue-600 rounded-lg hover:bg-blue-700 transition-transform transform hover:scale-[1.02] duration-300 shadow-xl shadow-blue-400/50">
+  <button className="px-8 py-4 text-md font-bold text-white bg-blue-600 rounded-lg hover:bg-blue-700 transition-transform transform hover:scale-[1.02] duration-300 shadow-xl shadow-blue-400/50">
     {children}
   </button>
 );
 
 // Outline Button (Blue Border style)
 const OutlineButton = ({ children }: { children: ReactNode }) => (
-  <button className="px-8 py-4 text-lg font-bold text-white border-2 border-white rounded-lg hover:bg-blue-50 hover:text-blue-700 transition-transform transform hover:scale-[1.02] duration-300">
+  <button className="px-8 py-4 text-md font-bold text-white border-2 border-white rounded-lg hover:bg-blue-50 hover:text-blue-700 transition-transform transform hover:scale-[1.02] duration-300">
     {children}
   </button>
 );
@@ -75,12 +75,12 @@ export default function HeroSection() {
   return (
     // FULL WIDTH CONTAINER: Background takes up 100% width
     <div 
-      className="relative text-center pt-20 pb-12 md:pt-32 md:pb-5 bg-cover bg-center bg-no-repeat overflow-hidden"
+      className="relative text-center pt-24 pb-12 md:pt-32 md:pb-20 bg-cover bg-center bg-no-repeat overflow-hidden"
       style={{ backgroundImage: "url('/tech.jpg')" }}
     >
       <div className="absolute inset-0 bg-black opacity-50 z-0"></div>
       <motion.div
-        className="absolute top-0 left-0 -translate-x-1/2 -translate-y-1/2 z-0"
+        className="absolute top-0 left-0 -translate-x-1/2 -translate-y-1/2 z-0 hidden md:block"
         animate={{
           rotate: [0, 360],
           scale: [1, 1.1, 1],
@@ -95,7 +95,7 @@ export default function HeroSection() {
         <div className="w-[700px] h-[700px] bg-blue-200 rounded-full opacity-20 blur-3xl"></div>
       </motion.div>
       <div
-        className="absolute bottom-1/5 left-[90%] w-48 h-48 opacity-80 z-0 bg-gradient-to-r from-blue-300 to-orange-500"
+        className="absolute bottom-1/5 left-[90%] w-32 h-32 md:w-48 md:h-48 opacity-60 md:opacity-80 z-0 bg-gradient-to-r from-blue-300 to-orange-500"
         style={{
           WebkitMaskImage: 'radial-gradient(circle, black 2px, transparent 2px)',
           WebkitMaskRepeat: 'repeat',
@@ -106,7 +106,7 @@ export default function HeroSection() {
         }}
       ></div>
       <div
-        className="absolute top-30 left-[-5%] w-48 h-48 opacity-80 z-0 bg-gradient-to-r from-blue-300 to-orange-500"
+        className="absolute top-1/4 left-[-5%] w-32 h-32 md:w-48 md:h-48 opacity-60 md:opacity-80 z-0 bg-gradient-to-r from-blue-300 to-orange-500"
         style={{
           WebkitMaskImage: 'radial-gradient(circle, black 2px, transparent 2px)',
           WebkitMaskRepeat: 'repeat',
@@ -117,7 +117,7 @@ export default function HeroSection() {
         }}
       ></div>
       <motion.div
-        className="absolute bottom-0 right-0 translate-x-1/2 translate-y-1/2 z-0"
+        className="absolute bottom-0 right-0 translate-x-1/2 translate-y-1/2 z-0 hidden md:block"
         animate={{
           rotate: [0, -360],
         }}
@@ -133,7 +133,7 @@ export default function HeroSection() {
 
       {/* Main Content Container (Centered and Z-indexed on top) */}
       <motion.div
-        className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pb-10"
+        className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mt-10 md:mt-0"
         initial="hidden"
         animate="visible"
         variants={containerVariants}
@@ -144,28 +144,28 @@ export default function HeroSection() {
         </motion.div>
 
         {/* Main Heading with Gradient Text */}
-        <motion.h1 variants={itemVariants} className="text-3xl sm:text-5xl md:text-6xl font-extrabold text-white tracking-tighter leading-tight mt-4">
-          <span className="block font-mono text-3xl sm:text-4xl md:text-6xl text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-orange-500 mt-2">
+        <motion.h1 variants={itemVariants} className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white tracking-tighter leading-tight mt-4">
+          <span className="block font-mono text-4xl sm:text-5xl md:text-6xl text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-orange-500 mt-2">
             Master Full Stack Development
           </span>
-          <span className="block text-3xl font-normal sm:text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-orange-500 mt-2 animate-text-glow">
+          <span className="block text-4xl font-normal sm:text-5xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-orange-500 mt-2 animate-text-glow">
             Land Your Dream Job
           </span>
         </motion.h1>
 
         {/* Sub-text / Description */}
-        <motion.p variants={itemVariants} className="mt-6 text-lg md:text-xl text-white max-w-3xl mx-auto">
+        <motion.p variants={itemVariants} className="mt-6 text-base md:text-xl text-white max-w-3xl mx-auto">
           45 days of intensive training • Guaranteed internship • Full-time job placement
         </motion.p>
 
         {/* Action Buttons */}
-        <motion.div variants={itemVariants} className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6 mt-10">
+        <motion.div variants={itemVariants} className="flex flex-row justify-center items-center space-x-4 sm:space-x-6 mt-10">
           <PrimaryButton>Start Journey</PrimaryButton>
           <OutlineButton>Download Syllabus</OutlineButton>
         </motion.div>
 
         {/* Feature Badges (Using the new circular style) */}
-        <motion.div variants={itemVariants} className="flex flex-wrap justify-center gap-x-12 gap-y-8 mt-15">
+        <motion.div variants={itemVariants} className="grid grid-cols-2 md:grid-cols-4 place-items-center gap-y-8 mt-16 md:mt-20">
           <FeatureBadge
             icon={Code}
             title="90 Days Training"
