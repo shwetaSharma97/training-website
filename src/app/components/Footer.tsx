@@ -9,9 +9,8 @@ const Footer: React.FC = () => {
         {/* Logo + About */}
         <div>
           <div className="flex items-center gap-2 mb-3">
-            <span className="text-blue-500 text-2xl font-bold">&gt;_</span>
             <h2 className="text-xl font-semibold text-white">
-              CodeNClimb Solutions
+              CodeClimbNGrow
             </h2>
           </div>
           <p className="text-sm text-gray-400 leading-relaxed">
@@ -61,7 +60,7 @@ const Footer: React.FC = () => {
           <ul className="space-y-3 text-gray-400">
             <li className="flex items-center gap-3">
               <EnvelopeIcon className="w-5 h-5 text-blue-400" />
-              <span>info@climbncode.com</span>
+              <span>info@codeclimbngrow.com</span>
             </li>
             <li className="flex items-center gap-3">
               <PhoneIcon className="w-5 h-5 text-blue-400" />

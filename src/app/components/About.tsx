@@ -71,7 +71,7 @@ export default function About() {
                   <TrendingUp />
                 </span>
               </div>
-              <p className="text-lg font-bold text-gray-900">ClimbNGrow</p>
+              <p className="text-lg font-bold text-gray-900">CodeClimbNGrow</p>
               <p className="text-xs text-gray-500">
                 Climbing career through coding & software
               </p>
@@ -90,7 +90,7 @@ export default function About() {
               At
               <span className="font-bold text-gray-900">
                 {" "}
-                ClimbNCode Solutions ,
+                CodeClimbNGrow ,
               </span>
               we believe coding is more than just a skill — it’s the language of
               innovation and possibility.

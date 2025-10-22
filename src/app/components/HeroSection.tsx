@@ -3,7 +3,7 @@
 import React, { ReactNode } from 'react';
 import Image from 'next/image'; // Included for standard Next.js component structure
 import { Code, Users, Briefcase, LucideIcon, Zap, LucideProps } from 'lucide-react'; // Updated icons for new badge design
-import { motion } from 'framer-motion';
+import { easeInOut, motion } from 'framer-motion';
 
 // =========================================================================
 // 1. HELPER COMPONENTS (FeatureBadge, PrimaryButton, OutlineButton)
@@ -67,8 +67,12 @@ const containerVariants = {
 };
 
 const itemVariants = {
-  hidden: { y: 20, opacity: 0 },
-  visible: { y: 0, opacity: 1, transition: { duration: 0.5, ease: 'easeOut' } },
+  hidden: { opacity: 0, y: 20 },
+  visible: { 
+    opacity: 1, 
+    y: 0, 
+    transition: { duration: 0.6, ease: easeInOut } // ✅ correct usage
+  }
 };
 
 export default function HeroSection() {
