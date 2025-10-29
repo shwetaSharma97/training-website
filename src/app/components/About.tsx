@@ -18,7 +18,7 @@ export default function About() {
 
       {/* Dotted Patterns (Top Left and Bottom Center) */}
       <div
-        className="absolute top-1/4 left-1/4 w-32 h-32 opacity-80 z-0"
+        className="hidden md:block absolute top-1/4 left-1/4 w-32 h-32 opacity-80 z-0"
         style={{
           backgroundImage: "radial-gradient(currentColor 2px, transparent 2px)",
           backgroundSize: "16px 16px",
@@ -26,7 +26,7 @@ export default function About() {
         }} // Blue dots
       ></div>
       <div
-        className="absolute bottom-1/4 left-1/3 w-48 h-48 opacity-80 z-0"
+        className="hidden md:block absolute bottom-1/4 left-1/3 w-48 h-48 opacity-80 z-0"
         style={{
           backgroundImage: "radial-gradient(currentColor 2px, transparent 2px)",
           backgroundSize: "16px 16px",
@@ -64,29 +64,29 @@ export default function About() {
             </div>
 
             {/* Tech Booster Info Card (Dreams can come true here) */}
-            <div className="absolute top-[-15%] right-[-5%] sm:top-0 sm:right-0 lg:right-[4%] lg:top-[-13%] w-46 h-36 bg-white p-6 rounded-xl shadow-xl text-center border border-gray-100 transform sm:translate-x-0 lg:translate-x-1/4 sm:translate-y-0 lg:translate-y-[-10%]">
+            <div className="absolute -top-12 -right-4 sm:top-0 sm:right-0 lg:right-[4%] lg:top-[-13%] w-40 sm:w-48 h-auto bg-white p-4 sm:p-6 rounded-xl shadow-xl text-center border border-gray-100 transform sm:translate-x-0 lg:translate-x-1/4 sm:translate-y-0 lg:translate-y-[-10%]">
               {/* Circular Gauge/Icon (Placeholder) */}
-              <div className="w-11 h-11 mx-auto mb-2 flex items-center justify-center border-4 border-blue-300 rounded-full">
-                <span className="text-xl font-bold text-blue-500">
+              <div className="w-9 h-9 sm:w-11 sm:h-11 mx-auto mb-2 flex items-center justify-center border-4 border-blue-300 rounded-full">
+                <span className="text-lg sm:text-xl font-bold text-blue-500">
                   <TrendingUp />
                 </span>
               </div>
-              <p className="text-lg font-bold text-gray-900">CodeClimbNGrow</p>
-              <p className="text-xs text-gray-500">
+              <p className="text-base sm:text-lg font-bold text-gray-900">CodeClimbNGrow</p>
+              <p className="text-[10px] text-gray-500">
                 Climbing career through coding & software
               </p>
             </div>
           </div>
 
           {/* RIGHT COLUMN: About Text and CTA */}
-          <div className="pt-20 lg:pt-0 text-center lg:text-left">
-            <p className="text-sm font-semibold text-gray-500 uppercase tracking-widest mb-2">
+          <div className="pt-10 lg:pt-0 text-center lg:text-left">
+            <p className="text-sm text-justify font-semibold text-gray-500 uppercase tracking-widest mb-2">
               Founder Message
             </p>
             {/* Green Underline */}
             <div className="w-16 h-1 bg-blue-500 mb-6 rounded-full text-"></div>
 
-            <p className="text-md text-gray-700 leading-relaxed max-w-lg">
+            <p className="text-md text-justify text-gray-700 leading-relaxed max-w-lg">
               At
               <span className="font-bold text-gray-900">
                 {" "}
@@ -96,7 +96,7 @@ export default function About() {
               innovation and possibility.
             </p>
 
-            <p className="text-md text-gray-700 leading-relaxed max-w-lg mt-3">
+            <p className="text-md text-justify text-gray-700 leading-relaxed max-w-lg mt-3">
               Our mission is to guide every curious mind from learning to
               creating — through hands-on practice, real-world projects, and
               mentorship that builds confidence. We’re here to help students

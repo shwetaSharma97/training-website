@@ -26,7 +26,7 @@ const EnrollmentForm = () => {
   return (
     <section
       id="enroll"
-      className="relative min-h-screen bg-gradient-to-br from-blue-50 via-white to-orange-50 flex items-center justify-center px-6 py-16 overflow-hidden"
+      className="relative min-h-screen bg-gradient-to-br from-blue-50 via-white to-orange-50 flex items-center justify-center px-3 py-16 overflow-hidden"
     >
       {/* ✨ Center Glow Effects */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
@@ -109,9 +109,10 @@ const EnrollmentForm = () => {
               className="w-full bg-white/60 border border-gray-300 rounded-md px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-blue-400 transition-all duration-200"
             >
               <option disabled value="">Select a program</option>
-              <option value="frontend">Frontend Development</option>
-              <option value="angular">Angular Mastery</option>
+              <option value="frontend">React JS</option>
+              <option value="angular">Angular JS</option>
               <option value="backend">Backend Development</option>
+              <option value="backend">Python</option>
             </select>
           </div>
 

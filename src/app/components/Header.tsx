@@ -1,7 +1,8 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Menu, X } from 'lucide-react';
 
 const navLinks = [
@@ -13,15 +14,37 @@ const navLinks = [
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      // A threshold of 100px to start the effect.
+      // You can adjust this value.
+      if (window.scrollY > 100) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    // Cleanup the event listener on component unmount
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-lg shadow-sm">
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white/80 backdrop-blur-lg shadow-sm' : 'bg-white/90'}`}>
       <div className="mx-auto max-w-screen-xl px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <Link href="/" className="text-2xl font-bold text-gray-900">
-              <span className="text-blue-600">CodeClimbNGrow</span>
+            <Link href="/" className="flex items-center gap-1">
+              <Image src="/logo-bg-remove.png" alt="CodeClimbNGrow" width={60} height={60} />
+              <div>
+                <h1 className="text-xl font-bold text-gray-900">CodeClimbNGrow</h1>
+                <p className="text-xs text-gray-500 sm:block">Climbing career through coding & software</p>
+              </div>
             </Link>
           </div>
 

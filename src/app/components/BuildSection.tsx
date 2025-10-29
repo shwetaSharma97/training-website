@@ -19,7 +19,7 @@ const AchievementCard: React.FC<AchievementCardProps> = ({
     whileInView={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.6 }}
     viewport={{ once: true }}
-    className="group relative bg-gray-800/60 hover:bg-gray-800 border border-gray-700 hover:border-blue-500/50 rounded-2xl p-6 shadow-xl transition-all duration-300"
+    className="group relative bg-gray-800/60 hover:bg-gray-800 border border-gray-700 hover:border-blue-500/50 rounded-2xl p-4 sm:p-6 shadow-xl transition-all duration-300 flex flex-col"
   >
     {/* Glow border */}
     <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-blue-500/10 to-transparent opacity-0 group-hover:opacity-100 blur transition duration-300"></div>
@@ -27,13 +27,13 @@ const AchievementCard: React.FC<AchievementCardProps> = ({
     {/* Icon */}
     <div className="flex items-center mb-3">
       <div className="p-2 rounded-lg bg-blue-500/10 text-blue-400 mr-3">
-        <Icon className="h-6 w-6" />
+        <Icon className="h-5 w-5 sm:h-6 sm:w-6" />
       </div>
-      <h4 className="text-lg font-semibold text-white">{title}</h4>
+      <h4 className="text-base sm:text-lg font-semibold text-white">{title}</h4>
     </div>
 
     {/* Description */}
-    <p className="text-gray-400 text-sm">{description}</p>
+    <p className="text-gray-400 text-sm flex-grow">{description}</p>
   </motion.div>
 );
 

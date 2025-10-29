@@ -4,15 +4,11 @@ import CurriculumSection from '@/app/components/TechnologiesULearn';
 import BuildSection from '@/app/components/BuildSection';
 import SuccessStories from '@/app/components/SuccessStories';
 import EnrollmentForm from '@/app/components/EnrollmentForm';
-import Footer from '@/app/components/Footer';
 import About from './components/About';
-import Header from './components/Header';
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-white">
-      <Header />
-      {/* Container for the main body content */}
+    <>
       <div className="mx-auto">
         <HeroSection />
 
@@ -41,8 +37,6 @@ export default function Home() {
           <EnrollmentForm />
         </section>
       </div>
-      
-      <Footer />
-    </main>
+    </>
   );
 }

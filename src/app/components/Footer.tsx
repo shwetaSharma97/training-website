@@ -1,5 +1,7 @@
 import React from "react";
 import { EnvelopeIcon, PhoneIcon, MapPinIcon } from "@heroicons/react/24/outline";
+import Link from "next/link";
+import Image from "next/image";
 
 const Footer: React.FC = () => {
   return (
@@ -8,10 +10,14 @@ const Footer: React.FC = () => {
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-10 border-b border-gray-700 pb-10">
         {/* Logo + About */}
         <div>
-          <div className="flex items-center gap-2 mb-3">
-            <h2 className="text-xl font-semibold text-white">
-              CodeClimbNGrow
-            </h2>
+          <div className="flex-shrink-0">
+            <Link href="/" className="flex items-center gap-3">
+              <Image src="/logo-bg-remove.png" alt="CodeClimbNGrow" width={60} height={60} />
+              <div>
+                <h1 className="text-xl font-bold text-white">CodeClimbNGrow</h1>
+                {/* <p className="text-xs text-gray-500 sm:block">Climbing career through coding & software</p> */}
+              </div>
+            </Link>
           </div>
           <p className="text-sm text-gray-400 leading-relaxed">
             Transform your career with our comprehensive full-stack development program.
@@ -39,7 +45,7 @@ const Footer: React.FC = () => {
         <div>
           <h3 className="text-white font-semibold mb-4">Programs</h3>
           <ul className="space-y-2">
-            {["Full-Stack Development", "Frontend Track", "Backend Track", "Workshops"].map(
+            {["React JS / Angular JS", "Frontend Track", "Backend Track", "Python" ,"Workshops"].map(
               (item) => (
                 <li key={item}>
                   <a
