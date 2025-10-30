@@ -6,7 +6,7 @@ export default function About() {
   return (
     <section
       id="about"
-      className="relative py-20 md:py-32 bg-white overflow-hidden"
+      className="relative py-20 md:py-25 bg-white overflow-hidden"
     >
       {/* --- Background Decorative Elements --- */}
 
@@ -42,7 +42,7 @@ export default function About() {
             {/* Main Image Container */}
             <div className="relative w-full max-w-lg rounded-xl overflow-hidden shadow-2xl">
               <Image
-                src="/about.webp" // Placeholder path (replace with your actual image)
+                src="/image.webp" // Placeholder path (replace with your actual image)
                 alt="Enrolled Learner"
                 width={700}
                 height={470}
@@ -64,7 +64,7 @@ export default function About() {
             </div>
 
             {/* Tech Booster Info Card (Dreams can come true here) */}
-            <div className="absolute -top-12 -right-4 sm:top-0 sm:right-0 lg:right-[4%] lg:top-[-13%] w-40 sm:w-48 h-auto bg-white p-4 sm:p-6 rounded-xl shadow-xl text-center border border-gray-100 transform sm:translate-x-0 lg:translate-x-1/4 sm:translate-y-0 lg:translate-y-[-10%]">
+            <div className="absolute -top-12 -right-4 sm:top-0 sm:right-0 lg:right-[4%] lg:top-[-13%] w-40 sm:w-48 h-auto bg-white p-2 sm:p-3 rounded-xl shadow-xl text-center border border-gray-100 transform sm:translate-x-0 lg:translate-x-1/4 sm:translate-y-0 lg:translate-y-[-10%]">
               {/* Circular Gauge/Icon (Placeholder) */}
               <div className="w-9 h-9 sm:w-11 sm:h-11 mx-auto mb-2 flex items-center justify-center border-4 border-blue-300 rounded-full">
                 <span className="text-lg sm:text-xl font-bold text-blue-500">
