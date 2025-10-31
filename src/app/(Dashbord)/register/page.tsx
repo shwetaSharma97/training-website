@@ -25,18 +25,9 @@ const EnrollmentForm = () => {
   const [loading, setLoading] = useState(false);
   const [responseMsg, setResponseMsg] = useState("");
   const [errors, setErrors] = useState({
-    firstName: "",
-    lastName: "",
     email: "",
     phone: "",
-    qualification: "",
-    passOutYear: "",
-    college: "",
-    address: "",
-    city: "",
-    state: "",
     pincode: "",
-    course: "",
   });
 
   const handleChange = (
@@ -52,48 +43,21 @@ const EnrollmentForm = () => {
   };
 
   const validateForm = () => {
-    const newErrors = {
-      firstName: "",
-      lastName: "",
-      email: "",
-      phone: "",
-      qualification: "",
-      passOutYear: "",
-      college: "",
-      address: "",
-      city: "",
-      state: "",
-      pincode: "",
-      course: "",
-    };
+    const newErrors = { email: "", phone: "", pincode: "" };
     let isValid = true;
 
-    // Required field checks
-    const requiredFields: (keyof typeof formData)[] = [
-      "firstName", "lastName", "email", "phone", "college", 
-      "qualification", "passOutYear", "course", "address", "city", "state", "pincode"
-    ];
-
-    requiredFields.forEach(field => {
-      if (!formData[field]) {
-        newErrors[field as keyof typeof newErrors] = "This field is required.";
-        isValid = false;
-      }
-    });
-
-    // Format validation (only if field is not empty)
-    if (formData.email && !/^\S+@\S+\.\S+$/.test(formData.email)) {
-      newErrors.email = "A valid email address is required.";
+    if (!/^\S+@\S+\.\S+$/.test(formData.email)) {
+      newErrors.email = "Please enter a valid email address.";
       isValid = false;
     }
 
-    if (formData.phone && !/^\d{10}$/.test(formData.phone)) {
-      newErrors.phone = "Phone number must be 10 digits.";
+    if (!/^\d{10}$/.test(formData.phone)) {
+      newErrors.phone = "Please enter a valid 10-digit phone number.";
       isValid = false;
     }
 
-    if (formData.pincode && !/^\d{6}$/.test(formData.pincode)) {
-      newErrors.pincode = "Pincode must be 6 digits.";
+    if (!/^\d{6}$/.test(formData.pincode)) {
+      newErrors.pincode = "Please enter a valid 6-digit pincode.";
       isValid = false;
     }
 
@@ -145,7 +109,7 @@ const EnrollmentForm = () => {
   return (
     <section
       id="enroll"
-      className="relative min-h-screen bg-gradient-to-br from-blue-50 via-white to-orange-50 flex items-center justify-center px-3 py-16 overflow-hidden"
+      className="relative min-h-screen mt-10 bg-gradient-to-br from-blue-50 via-white to-orange-50 flex items-center justify-center px-3 py-16 overflow-hidden"
     >
       {/* Background Glow */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
@@ -173,17 +137,17 @@ const EnrollmentForm = () => {
         {/* Form */}
         <form onSubmit={handleSubmit} className="p-8 space-y-6 text-gray-800 relative z-10">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-            <FormField label="First Name" name="firstName" icon={<User className="h-4 w-4" />} value={formData.firstName} onChange={handleChange} required error={errors.firstName} />
-            <FormField label="Last Name" name="lastName" icon={<User className="h-4 w-4" />} value={formData.lastName} onChange={handleChange} required error={errors.lastName} />
+            <FormField label="First Name" name="firstName" icon={<User className="h-4 w-4" />} value={formData.firstName} onChange={handleChange} required />
+            <FormField label="Last Name" name="lastName" icon={<User className="h-4 w-4" />} value={formData.lastName} onChange={handleChange} required />
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             <FormField label="Email Address" name="email" icon={<Mail className="h-4 w-4" />} type="email" value={formData.email} onChange={handleChange} required error={errors.email} />
             <FormField label="Phone Number" name="phone" icon={<Phone className="h-4 w-4" />} type="tel" value={formData.phone} onChange={handleChange} required error={errors.phone} />
           </div>  
           <div className="grid grid-cols-1 sm:grid-cols-4 gap-6">
-            <FormField label="College Name" name="college" icon={<Building className="h-4 w-4" />} value={formData.college} onChange={handleChange} required error={errors.college} />
-            <FormField label="Qualification" name="qualification" icon={<GraduationCap className="h-4 w-4" />} value={formData.qualification} onChange={handleChange} required error={errors.qualification} />
-            <FormField label="Pass Out Year" name="passOutYear" value={formData.passOutYear} onChange={handleChange} required error={errors.passOutYear} />
+            <FormField label="College Name" name="college" icon={<Building className="h-4 w-4" />} value={formData.college} onChange={handleChange} required />
+            <FormField label="Qualification" name="qualification" icon={<GraduationCap className="h-4 w-4" />} value={formData.qualification} onChange={handleChange} required />
+            <FormField label="Pass Out Year" name="passOutYear" value={formData.passOutYear} onChange={handleChange} required />
              <div>
             <label className="block text-sm font-medium text-gray-700 mb-1 flex items-center gap-2">
               <BookOpen className="h-4 w-4 text-blue-600" />
@@ -194,11 +158,7 @@ const EnrollmentForm = () => {
               value={formData.course}
               onChange={handleChange}
               required
-              className={`w-full bg-white/60 border rounded-md px-4 py-2.5 focus:outline-none focus:ring-2 transition-all duration-200 ${
-                errors.course
-                  ? "border-red-500 focus:ring-red-400 focus:border-red-400"
-                  : "border-gray-300 focus:ring-blue-400 focus:border-blue-400"
-              }`}
+              className="w-full bg-white/60 border border-gray-300 rounded-md px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-blue-400 transition-all duration-200"
             >
               <option disabled value="">Select a course</option>
               <option value="React">React</option>
@@ -209,13 +169,12 @@ const EnrollmentForm = () => {
               <option value="Backend Development">Backend Development</option>
               <option value="Other">Other</option>
             </select>
-            {errors.course && <p className="text-red-500 text-xs mt-1">{errors.course}</p>}
           </div>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-4 gap-6">
-            <FormField label="Address" name="address" icon={<Home className="h-4 w-4" />} value={formData.address} onChange={handleChange} required error={errors.address} />
-            <FormField label="City" name="city" icon={<MapPin className="h-4 w-4" />} value={formData.city} onChange={handleChange} required error={errors.city} />
-            <FormField label="State" name="state" value={formData.state} onChange={handleChange} required error={errors.state} />
+            <FormField label="Address" name="address" icon={<Home className="h-4 w-4" />} value={formData.address} onChange={handleChange} required />
+            <FormField label="City" name="city" icon={<MapPin className="h-4 w-4" />} value={formData.city} onChange={handleChange} required />
+            <FormField label="State" name="state" value={formData.state} onChange={handleChange} required />
             <FormField label="Pincode" name="pincode" value={formData.pincode} onChange={handleChange} required error={errors.pincode} />
           </div>
 

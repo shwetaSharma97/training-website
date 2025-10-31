@@ -39,7 +39,7 @@ const AchievementCard: React.FC<AchievementCardProps> = ({
 
 export default function LearningExperience() {
   return (
-    <section className="relative py-24 bg-gradient-to-b from-gray-900 via-gray-900 to-black text-white overflow-hidden">
+    <section className="relative py-8 bg-gradient-to-b from-gray-900 via-gray-900 to-black text-white overflow-hidden">
       {/* Decorative Grid Pattern */}
       <div
         className="absolute inset-0 opacity-10"
@@ -58,7 +58,7 @@ export default function LearningExperience() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="text-5xl font-extrabold mb-4 bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text leading-tight"
+            className="text-5xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text leading-tight"
           >
             Learn by Building. Achieve by Creating.
           </motion.h2>
@@ -86,7 +86,7 @@ export default function LearningExperience() {
             <AchievementCard
               icon={Server}
               title="Engineer Scalable Backends"
-              description="Learn Node.js, FastAPI, and MongoDB to build powerful, production-ready APIs."
+              description="Learn Node.js, Python, and MongoDB to build powerful, production-ready APIs."
             />
             <AchievementCard
               icon={ShieldCheck}

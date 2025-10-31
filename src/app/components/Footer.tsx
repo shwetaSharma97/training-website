@@ -68,10 +68,10 @@ const Footer: React.FC = () => {
               <EnvelopeIcon className="w-5 h-5 text-blue-400" />
               <span>info@codeclimbngrow.com</span>
             </li>
-            <li className="flex items-center gap-3">
+            {/* <li className="flex items-center gap-3">
               <PhoneIcon className="w-5 h-5 text-blue-400" />
               <span>+91 87884-05379</span>
-            </li>
+            </li> */}
             <li className="flex items-center gap-3">
               <MapPinIcon className="w-5 h-5 text-blue-400" />
               <span>Hyderabad, Telangana</span>
