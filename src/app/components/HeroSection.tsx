@@ -168,7 +168,7 @@ export default function HeroSection() {
         {/* Main Heading with Gradient Text */}
         <motion.h1
           variants={itemVariants}
-          className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white tracking-tighter leading-tight mt-4"
+          className="text-4xl sm:text-5xl md:text-6xl font-bold text-white tracking-tighter leading-tight mt-4"
         >
           <span className="block font-mono text-4xl sm:text-5xl md:text-6xl text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-orange-500 mt-2">
             Master Full Stack Development

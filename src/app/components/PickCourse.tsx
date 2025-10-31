@@ -143,7 +143,7 @@
             {/* <p className="text-sm font-semibold text-gray-500 uppercase tracking-widest mb-2">
             Online app based courses
             </p> */}
-            <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight mb-4">
+            <h2 className="text-4xl md:text-4xl font-bold text-gray-900 leading-tight mb-4">
             Pick an Online Course To Get Started
             </h2>
             {/* Green Underline */}

@@ -119,7 +119,7 @@ const EnrollmentForm = () => {
 
       {/* Form Card */}
       <motion.div
-        className="relative max-w-3xl w-full bg-white/30 backdrop-blur-2xl border border-white/40 shadow-[0_8px_40px_rgba(0,0,0,0.15)] rounded-3xl overflow-hidden"
+        className="relative max-w-4xl w-full bg-white/30 backdrop-blur-2xl border border-white/40 shadow-[0_8px_40px_rgba(0,0,0,0.15)] rounded-3xl overflow-hidden"
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}

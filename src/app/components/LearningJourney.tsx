@@ -49,7 +49,7 @@ const GuaranteedPath = () => {
   return (
     <section
       id="journey"
-      className="relative bg-gradient-to-b from-[#e2e3e6] via-[#f7f8f9] to-[#e9f0ff] py-24 px-6 overflow-hidden"
+      className="relative bg-gradient-to-b from-[#e2e3e6] via-[#f7f8f9] to-[#e9f0ff] py-8 px-6 overflow-hidden"
     >
       {/* Floating gradient orbs */}
       {/* <div className="absolute -top-20 -left-32 w-72 h-72 bg-gradient-to-r from-blue-200/60 to-indigo-300/60 blur-3xl rounded-full animate-pulse" /> */}
@@ -62,7 +62,7 @@ const GuaranteedPath = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-4xl md:text-5xl font-bold text-gray-900 tracking-tight"
+          className="text-4xl md:text-4xl font-bold text-gray-900"
         >
           Your Learning Journey
         </motion.h2>
