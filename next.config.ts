@@ -1,24 +1,7 @@
-import {NextConfig} from 'next';
+import type { NextConfig } from 'next';
  
 const nextConfig: NextConfig = {
-  basePath: '',
-  trailingSlash: true,
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
- 
-  typescript: {
-    ignoreBuildErrors: true,
-  },
- 
-  async rewrites() {
-    return [
-      {
-        source: 'https://www.codeclimbngrow.com/api', // All API calls starting with /api/v1
-        destination: 'https://script.google.com/macros/s/AKfycby74X9nJRqkDmlO4pEic7wQHsBikcYivYIJDMB0k3koAxfvV_GWduBFQYWTuYUWZtjdFA/exec', // Proxy to backend API
-      },
-    ];
-  },
+  // Your Next.js configuration options go here.
 };
  
 module.exports = nextConfig;

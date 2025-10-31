@@ -60,9 +60,11 @@ const PrimaryButton = ({ children }: { children: ReactNode }) => (
 
 // Outline Button (Blue Border style)
 const OutlineButton = ({ children }: { children: ReactNode }) => (
-  <button className="px-5 py-4 text-md font-bold text-white border-2 border-white rounded-lg hover:bg-blue-50 hover:text-blue-700 transition-transform transform hover:scale-[1.02] duration-300">
-    {children}
-  </button>
+  <Link href="#our-program">
+    <button className="px-7 py-4 text-md font-bold text-white border-2 border-white rounded-lg hover:bg-blue-50 hover:text-blue-700 transition-transform transform hover:scale-[1.02] duration-300">
+      {children}
+    </button>
+  </Link>
 );
 
 // Animation variants for Framer Motion
@@ -191,7 +193,7 @@ export default function HeroSection() {
           className="flex flex-row justify-center items-center space-x-4 sm:space-x-6 mt-10"
         >
           <PrimaryButton>Start Journey</PrimaryButton>
-          <OutlineButton>Download Syllabus</OutlineButton>
+          <OutlineButton>View More</OutlineButton>
         </motion.div>
 
         {/* Feature Badges (Using the new circular style) */}

@@ -10,6 +10,7 @@ const navLinks = [
   { href: '#curriculum', label: 'Curriculum' },
   { href: '#about', label: 'About' },
   { href: '#stories', label: 'Success Stories' },
+  { href: '#our-program', label: 'Our Program' },
 ];
 
 export default function Header() {
@@ -60,7 +61,7 @@ export default function Header() {
           {/* CTA & Mobile Menu Button */}
           <div className="flex items-center gap-4">
             <div className="hidden sm:block">
-                <Link href="#enroll" className="px-6 py-2.5 text-md font-semibold text-white bg-blue-600 rounded-md hover:bg-blue-700 transition-all duration-300 shadow-md">
+                <Link href="register" className="px-6 py-2.5 text-md font-semibold text-white bg-blue-600 rounded-md hover:bg-blue-700 transition-all duration-300 shadow-md">
                     Enroll Now
                 </Link>
             </div>
@@ -85,7 +86,7 @@ export default function Header() {
                 ))}
             </nav>
             <div className="sm:hidden">
-                <Link href="#enroll" className="block w-full text-center px-6 py-3 text-md font-semibold text-white bg-blue-600 rounded-full hover:bg-blue-700 transition-all duration-300 shadow-md">
+                <Link href="register" className="block w-full text-center px-6 py-3 text-md font-semibold text-white bg-blue-600 rounded-md hover:bg-blue-700 transition-all duration-300 shadow-md">
                     Enroll Now
                 </Link>
             </div>

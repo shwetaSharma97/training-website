@@ -105,7 +105,7 @@ const CurriculumSection: React.FC = () => {
                 {
                   icon: <ServerIcon className="w-4 h-4 text-green-600" />,
                   title: "Core Technologies",
-                  desc: "Node.js, FastAPI, Express.js, RESTful APIs, WebSockets",
+                  desc: "Node.js, Python, Express.js, RESTful APIs, WebSockets",
                 },
                 {
                   icon: <CircleStackIcon className="w-4 h-4 text-green-600" />,

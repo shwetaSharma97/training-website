@@ -86,7 +86,7 @@ export default function LearningExperience() {
             <AchievementCard
               icon={Server}
               title="Engineer Scalable Backends"
-              description="Learn Node.js, FastAPI, and MongoDB to build powerful, production-ready APIs."
+              description="Learn Node.js, Python, and MongoDB to build powerful, production-ready APIs."
             />
             <AchievementCard
               icon={ShieldCheck}

@@ -52,8 +52,8 @@ const GuaranteedPath = () => {
       className="relative bg-gradient-to-b from-[#e2e3e6] via-[#f7f8f9] to-[#e9f0ff] py-24 px-6 overflow-hidden"
     >
       {/* Floating gradient orbs */}
-      <div className="absolute -top-20 -left-32 w-72 h-72 bg-gradient-to-r from-blue-200/60 to-indigo-300/60 blur-3xl rounded-full animate-pulse" />
-      <div className="absolute bottom-0 right-0 w-80 h-80 bg-gradient-to-r from-pink-200/60 to-orange-300/60 blur-3xl rounded-full animate-pulse" />
+      {/* <div className="absolute -top-20 -left-32 w-72 h-72 bg-gradient-to-r from-blue-200/60 to-indigo-300/60 blur-3xl rounded-full animate-pulse" /> */}
+      {/* <div className="absolute bottom-0 right-0 w-80 h-80 bg-gradient-to-r from-pink-200/60 to-orange-300/60 blur-3xl rounded-full animate-pulse" /> */}
 
       {/* Section Header */}
       <div className="relative max-w-7xl mx-auto text-center mb-16">
@@ -89,7 +89,7 @@ const GuaranteedPath = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.2, duration: 0.7 }}
-              className="group relative bg-white/20 backdrop-blur-2xl border border-white/30 rounded-3xl p-8 shadow-[0_8px_32px_rgba(31,38,135,0.1)] hover:shadow-[0_8px_40px_rgba(31,38,135,0.2)] hover:-translate-y-2 transition-all duration-500"
+              className="group relative bg-white/20 backdrop-blur-2xl border border-white/30 rounded-3xl p-7.5 shadow-[0_8px_32px_rgba(31,38,135,0.1)] hover:shadow-[0_8px_40px_rgba(31,38,135,0.2)] hover:-translate-y-2 transition-all duration-500"
             >
               {/* Icon Section (New Style) */}
               <div className="relative mb-8 flex justify-center">
@@ -99,9 +99,9 @@ const GuaranteedPath = () => {
                 <motion.div
                   whileHover={{ scale: 1.1, rotate: 3 }}
                   transition={{ type: "spring", stiffness: 200 }}
-                  className={`relative z-10 bg-white/30 backdrop-blur-lg border border-white/50 rounded-full p-6 shadow-lg`}
+                  className={`relative z-10 bg-white/30 backdrop-blur-lg border border-white/50 rounded-full p-5 shadow-lg`}
                 >
-                  <Icon className="w-10 h-10 text-gray-900" />
+                  <Icon className="w-8 h-8 text-gray-900" />
                   {/* Gradient ring border */}
                   <div
                     className={`absolute -inset-[2px] rounded-full bg-gradient-to-r ${phase.gradient} opacity-60 blur-[3px]`}
