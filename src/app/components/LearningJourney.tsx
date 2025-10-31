@@ -11,11 +11,11 @@ const phases = [
     icon: BookOpen,
     gradient: "from-blue-500/90 via-indigo-500/90 to-purple-500/90",
     features: [
-      "Frontend development with React",
-      "Learn backend with FastAPI & MongoDB",
-      "Build real-world projects",
-      "Mock interviews & resume prep",
-      "Daily coding challenges & workshops",
+      "Live Online Classes",
+      "Daily Challenges",
+      "Practice Assignments",
+      "Workshops & Seminars",
+      "Course PDFs & Resources",
     ],
   },
   {
@@ -27,8 +27,8 @@ const phases = [
       "Work on real client projects",
       "Collaborate with experienced teams",
       "Learn industry best practices",
-      "Build your professional portfolio",
-      "Career group support",
+      "Workshops & Seminars",
+      "Mock interviews",
     ],
   },
   {
@@ -38,7 +38,7 @@ const phases = [
     gradient: "from-orange-400/90 via-pink-500/90 to-red-500/90",
     features: [
       "Resume Building",
-      "Competitive salary package",
+      "Career Counseling & Job Referrals",
       "Mock interviews & soft skills",
       "Career mentorship",
     ],
