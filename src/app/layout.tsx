@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./global.css";
-import AppWrapper from "./components/AppWrapper";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -113,6 +112,8 @@ export const metadata: Metadata = {
     { media: "(prefers-color-scheme: light)", color: "#ffffff" }, // Light theme color
   ],
 };
+
+import AppWrapper from "./components/AppWrapper";
 
 export default function RootLayout({
   children,

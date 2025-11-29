@@ -4,7 +4,7 @@ import CurriculumSection from '@/app/components/TechnologiesULearn';
 import BuildSection from '@/app/components/BuildSection';
 import SuccessStories from '@/app/components/SuccessStories';
 import EnrollmentForm from '@/app/components/EnrollmentForm';
-import About from './components/About';
+import About from './components/FounderMessage';
 import OurProgram from './components/OurProgram';
 
 export default function Home() {
