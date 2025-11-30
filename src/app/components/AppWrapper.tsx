@@ -25,7 +25,7 @@ const AppWrapper = ({ children }: { children: React.ReactNode }) => {
         <>
           <Header />
           <Suspense fallback={<LoadingScreen />}>
-            <main className="min-h-screen bg-white">{children}</main>
+            <main className="min-h-screen bg-white pt-20">{children}</main>
           </Suspense>
           <Footer />
         </>
