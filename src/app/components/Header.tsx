@@ -1,26 +1,26 @@
-'use client';
+"use client";
 
-import { useState, useEffect } from 'react';
-import Link from 'next/link';
-import Image from 'next/image';
-import { Menu, X } from 'lucide-react';
+import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
+import Link from "next/link";
+import Image from "next/image";
+import { Menu, X } from "lucide-react";
 
 const navLinks = [
-  { href: '#journey', label: 'Journey' },
-  { href: '#curriculum', label: 'Curriculum' },
-  { href: '#about', label: 'About' },
-  { href: '#stories', label: 'Success Stories' },
-  { href: '#our-program', label: 'Our Program' },
+  { href: "/", label: "Home" },
+  { href: "/about", label: "About" },
+  { href: "/announcement", label: "Announcement" },
+  { href: "/courses", label: "Courses" },
+  { href: "/register", label: "Enroll Now" },
 ];
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
-      // A threshold of 100px to start the effect.
-      // You can adjust this value.
       if (window.scrollY > 100) {
         setIsScrolled(true);
       } else {
@@ -28,45 +28,67 @@ export default function Header() {
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
     // Cleanup the event listener on component unmount
-    return () => window.removeEventListener('scroll', handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white/80 backdrop-blur-lg shadow-sm' : 'bg-white/90'}`}>
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        isScrolled ? "bg-white/80 backdrop-blur-lg shadow-sm" : "bg-white/90"
+      }`}
+    >
       <div className="mx-auto max-w-screen-xl px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <div className="flex-shrink-0">
             <Link href="/" className="flex items-center gap-1">
-              <Image src="/logo-bg-remove.png" alt="CodeClimbNGrow" width={60} height={60} />
+              <Image
+                src="/logo-bg-remove.png"
+                alt="CodeClimbNGrow"
+                width={60}
+                height={60}
+              />
               <div>
-                <h1 className="text-xl font-bold text-gray-900">CodeClimbNGrow</h1>
-                <p className="text-xs text-gray-500 sm:block">Climbing career through coding & software</p>
+                <h1 className="text-xl font-bold text-gray-900">
+                  CodeClimbNGrow
+                </h1>
+                <p className="text-xs text-gray-500 sm:block">
+                  Climbing career through coding & software
+                </p>
               </div>
             </Link>
           </div>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-8">
-            {navLinks.map((link) => (
-              <Link key={link.href} href={link.href} className="text-gray-600 hover:text-blue-600 transition-colors duration-200">
-                {link.label}
-              </Link>
-            ))}
-          </nav>
-
           {/* CTA & Mobile Menu Button */}
           <div className="flex items-center gap-4">
-            <div className="hidden sm:block">
-                <Link href="register" className="px-6 py-2.5 text-md font-semibold text-white bg-blue-600 rounded-md hover:bg-blue-700 transition-all duration-300 shadow-md">
-                    Enroll Now
+            {/* Desktop Navigation */}
+            <nav className="hidden lg:flex items-center space-x-8">
+              {navLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className={`relative transition-colors duration-200 ${
+                    link.label === "Enroll Now"
+                      ? "bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700"
+                      : `text-base hover:text-blue-600 ${
+                          pathname === link.href
+                            ? "text-blue-600 font-semibold after:absolute after:bottom-[-4px] after:left-0 after:w-full after:h-[2px] after:bg-blue-600"
+                            : "text-gray-600"
+                        }`
+                  }`}
+                >
+                  {link.label}
                 </Link>
-            </div>
+              ))}
+            </nav>
             <div className="lg:hidden">
-              <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-100">
+              <button
+                onClick={() => setIsMenuOpen(!isMenuOpen)}
+                className="p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-100"
+              >
                 {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
               </button>
             </div>
@@ -79,17 +101,25 @@ export default function Header() {
         <div className="lg:hidden bg-white border-t border-gray-200">
           <div className="px-6 pt-2 pb-6 space-y-4">
             <nav className="flex flex-col space-y-4">
-                {navLinks.map((link) => (
-                <Link key={link.href} href={link.href} className="block py-2 text-gray-600 hover:text-blue-600" onClick={() => setIsMenuOpen(false)}>
-                    {link.label}
+              {navLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className={`block w-fit py-2 text-base transition-colors duration-200 relative ${
+                    link.label === "Enroll Now"
+                      ? "text-center bg-blue-600 text-white rounded-md hover:bg-blue-700"
+                      : `hover:text-blue-600 ${
+                          pathname === link.href
+                            ? "text-blue-600 font-semibold after:absolute after:bottom-0 after:left-0 after:w-full after:h-[2px] after:bg-blue-600"
+                            : "text-gray-600"
+                        }`
+                  }`}
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {link.label}
                 </Link>
-                ))}
+              ))}
             </nav>
-            <div className="sm:hidden">
-                <Link href="register" className="block w-full text-center px-6 py-3 text-md font-semibold text-white bg-blue-600 rounded-md hover:bg-blue-700 transition-all duration-300 shadow-md">
-                    Enroll Now
-                </Link>
-            </div>
           </div>
         </div>
       )}

@@ -1,7 +1,7 @@
 "use client";
 
 import React, { ReactNode } from "react";
-import Image from "next/image"; // Included for standard Next.js component structure
+import Image from "next/image";
 import {
   Code,
   Users,
@@ -9,15 +9,9 @@ import {
   LucideIcon,
   Zap,
   LucideProps,
-} from "lucide-react"; // Updated icons for new badge design
+} from "lucide-react";
 import { easeInOut, motion } from "framer-motion";
 import Link from "next/link";
-
-// =========================================================================
-// 1. HELPER COMPONENTS (FeatureBadge, PrimaryButton, OutlineButton)
-// =========================================================================
-
-// Custom FeatureBadge component matching the large circular style
 interface FeatureBadgeProps {
   icon: React.ForwardRefExoticComponent<
     Omit<LucideProps, "ref"> & React.RefAttributes<SVGSVGElement>
