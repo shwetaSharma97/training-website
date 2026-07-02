@@ -6,6 +6,7 @@ import SuccessStories from '@/app/components/SuccessStories';
 import EnrollmentForm from '@/app/components/EnrollmentForm';
 import About from './components/About';
 import OurProgram from './components/OurProgram';
+import MockInterviewHero from './components/InterviewSection';
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
         <section className="">
           <LearningJourney />
         </section>
+<MockInterviewHero />
 
         <section className="">
           <CurriculumSection />
@@ -30,13 +32,12 @@ export default function Home() {
       {/* <Courses /> */}
       {/* Full-width dark section */}
       <BuildSection />
-
       <div className="mx-auto">
         <section className="">
           <SuccessStories />
         </section>
 
-        <About />
+        {/* <About /> */}
 
         <section className="bg-white">
           <EnrollmentForm />

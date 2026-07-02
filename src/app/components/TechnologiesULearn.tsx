@@ -173,12 +173,12 @@ const CurriculumSection: React.FC = () => {
                <p className="text-sm font-medium text-gray-900 mb-2">Projects You'll Build:</p>
                <div className="flex flex-wrap gap-1"><span className="bg-blue-50 text-blue-700 px-2 py-1 rounded text-xs">E-commerce Site</span><span className="bg-blue-50 text-blue-700 px-2 py-1 rounded text-xs">Blog App</span><span className="bg-blue-50 text-blue-700 px-2 py-1 rounded text-xs">Movie App</span></div>
             </div> */}
-            <div className="flex items-center justify-between">
+            {/* <div className="flex items-center justify-between">
                <div className="flex items-center space-x-2"><span className="text-2xl font-bold text-gray-900"><div className="flex justify-center items-center"><IndianRupee width={20} />4999</div></span><span className="text-lg text-gray-500 line-through"><div className="flex justify-center items-center"><IndianRupee width={20} />4999</div></span></div>
                <button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-4 py-3 rounded-lg font-medium transition-all duration-300 whitespace-nowrap group-hover:shadow-lg"> <Link href="register">
                     Enroll Now
                 </Link></button>
-            </div>
+            </div> */}
          </div>
       </div>
       <div className="bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden hover:shadow-xl transition-all duration-300 group">
@@ -213,12 +213,12 @@ const CurriculumSection: React.FC = () => {
                <p className="text-sm font-medium text-gray-900 mb-2">Projects You'll Build:</p>
                <div className="flex flex-wrap gap-1"><span className="bg-blue-50 text-blue-700 px-2 py-1 rounded text-xs">Enterprise Dashboard</span><span className="bg-blue-50 text-blue-700 px-2 py-1 rounded text-xs">CRM System</span><span className="bg-blue-50 text-blue-700 px-2 py-1 rounded text-xs">Admin Panel</span></div>
             </div> */}
-            <div className="flex items-center justify-between">
+            {/* <div className="flex items-center justify-between">
                <div className="flex items-center space-x-2"><span className="text-2xl font-bold text-gray-900"><div className="flex justify-center items-center"><IndianRupee width={20} />4999</div></span><span className="text-lg text-gray-500 line-through"><div className="flex justify-center items-center"><IndianRupee width={20} />4999</div></span></div>
                <button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-4 py-3 rounded-lg font-medium transition-all duration-300 whitespace-nowrap group-hover:shadow-lg"> <Link href="register">
                     Enroll Now
                 </Link></button>
-            </div>
+            </div> */}
          </div>
       </div>
       <div className="bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden hover:shadow-xl transition-all duration-300 group">
@@ -253,12 +253,12 @@ const CurriculumSection: React.FC = () => {
                <p className="text-sm font-medium text-gray-900 mb-2">Projects You'll Build:</p>
                <div className="flex flex-wrap gap-1"><span className="bg-blue-50 text-blue-700 px-2 py-1 rounded text-xs">REST API</span><span className="bg-blue-50 text-blue-700 px-2 py-1 rounded text-xs">Microservices</span><span className="bg-blue-50 text-blue-700 px-2 py-1 rounded text-xs">Data Pipeline</span></div>
             </div> */}
-            <div className="flex items-center justify-between">
+            {/* <div className="flex items-center justify-between">
                <div className="flex items-center space-x-2"><span className="text-2xl font-bold text-gray-900"><div className="flex justify-center items-center"><IndianRupee width={20} />4999</div></span><span className="text-lg text-gray-500 line-through"><div className="flex justify-center items-center"><IndianRupee width={20} />4999</div></span></div>
                <button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-4 py-3 rounded-lg font-medium transition-all duration-300 whitespace-nowrap group-hover:shadow-lg"> <Link href="register">
                     Enroll Now
                 </Link></button>
-            </div>
+            </div> */}
          </div>
       </div>
       <div className="bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden hover:shadow-xl transition-all duration-300 group">
@@ -293,12 +293,12 @@ const CurriculumSection: React.FC = () => {
                <p className="text-sm font-medium text-gray-900 mb-2">Projects You'll Build:</p>
                <div className="flex flex-wrap gap-1"><span className="bg-blue-50 text-blue-700 px-2 py-1 rounded text-xs">Real-Time Chat</span><span className="bg-blue-50 text-blue-700 px-2 py-1 rounded text-xs">Payment System</span><span className="bg-blue-50 text-blue-700 px-2 py-1 rounded text-xs">Social Platform</span></div>
             </div> */}
-            <div className="flex items-center justify-between">
+            {/* <div className="flex items-center justify-between">
                <div className="flex items-center space-x-2"><span className="text-2xl font-bold text-gray-900"><div className="flex justify-center items-center"><IndianRupee />4999</div></span><span className="text-lg text-gray-500 line-through"><div className="flex justify-center items-center"><IndianRupee width={20} />4999</div></span></div>
                <button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-4 py-3 rounded-lg font-medium transition-all duration-300 whitespace-nowrap group-hover:shadow-lg"> <Link href="register">
                     Enroll Now
                 </Link></button>
-            </div>
+            </div> */}
          </div>
       </div>
    </div>
